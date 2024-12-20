@@ -8,8 +8,16 @@ body {
 
 header {
     background-color: #333;
-    padding: 10px;
-    text-align: center;
+    padding: 10px;    
+    text-align: right;
+}
+
+header span {
+    text-decoration: wavy;
+    background-color: white;
+    display: inline;
+
+    text-align: left;
 }
 
 nav ul {
@@ -38,6 +46,11 @@ h1 {
     font-size: 2.5em;
 }
 
+.center {
+    display: block;
+    width: 250px;
+}
+/* Form Control */
 form {
     max-width: 400px;
     margin: 0 auto;
@@ -75,9 +88,35 @@ form button:hover {
 }
 
 
-/* Form Control */
+
 
 input:focus:invalid {background-color: lightgreen;}
 input:focus:valid {background-color: rgb(255, 220, 220);}
 
 /* End Form Control */
+
+/* show the checked state*/
+.checkbox-wrapper input[type="checkbox"]:checked + label::after, 
+.radio-wrapper input[type="radio"]:checked + label::after {
+    content: "";
+}
+
+.checkbox-wrapper label, .radio-wrapper label  {
+    position: relative;
+    left: 10px;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+
+/* footer stlyse start */
+footer {
+    background-color: rgb(38, 98, 109);
+    padding: 10px;
+
+}
+footer span {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
